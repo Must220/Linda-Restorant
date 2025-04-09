@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladina Restoran</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Özel CSS -->
+    <style>
+        .parallax-bg {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .hover-zoom {
+            transition: transform 0.4s ease;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.1);
+        }
+        .hover-text {
+            transition: color 0.3s ease;
+        }
+        .hover-text:hover {
+            color: #f59e0b; /* Amber-500 */
+        }
+        .hover-scale-btn {
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+</head>
+<body class="font-sans bg-gray-900 text-white">
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-emerald-800 bg-opacity-90 z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold ">Ladina Restoran</h1>
+        <ul class="flex space-x-8">
+            <li><a href="#anasayfa" class="hover-text">Ana Sayfa</a></li>
+            <li><a href="#menu" class="hover-text">Menü</a></li>
+            <li><a href="#hakkimizda" class="hover-text">Hakkımızda</a></li>
+            <li><a href="#iletisim" class="hover-text">İletişim</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Ana Sayfa Start -->
+ <section id="anasayfa" class="h-screen flex items-center justify-center text-center parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200');">
+  <div class="bg-emerald-900 bg-opacity-70 p-10 rounded-xl ">
+     <h1 class="text-5xl md:text-6x1 font-extrabold mb-4">Ladina Restoran</h1>
+     <p class="text-lg md:text-2xl mb-8">Lezzetin Yeni Adresi</p>
+     <button onclick="window.location.href='#menu'" class="bg-amber-500 text-white px-8 py-3 rounded-lg hover-scale-btn hover:bg-amber-600">Menüyü Gör</button>
+  </div>
+ </section>
+<!-- Ana Sayfa End -->
+<!-- Menü Start -->
+ <section id="menu" class="py-20 bg-gray-800">
+ <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-16">Özel Lezzetlerimiz</h2>
+    <div class="space-y-12">
+    <div class="flex flex-col md:flex-row items-center">
+    <img src="img/fried-meat-with-crispy-crust-wooden-hemp.jpg" class="w-full md:w-1/3 h-64 object-cover rounded-lg hover-zoom" alt="Steak">
+    <div class="md:ml-8 mt-4 md:mt-0 text-center md:text-left">
+        <h3 class="text-2xl font-semibold mb-2">Izgara Bonfile</h3>
+        <p class="text-gray-300">Mükemmel pişmiş et, özel soslarla servis edilir.</p>
+        <p class="text-amber-500 font-bold mt-2">₺180</p>
+    </div>
+    </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center">
+        <img src="img/fotografia-de-alimentos-fEsd0-zXitc-unsplash.jpg" class="w-full md:w-1/3 h-64 object-cover rounded-lg hover-zoom mt-3" alt="Deniz Mahsulleri">
+        <div class="md:ml-8 mt-4 md:mt-0 text-center md:text-left">
+            <h3 class="text-2xl font-semibold mb-2">Deniz Mahsulleri Tabağı</h3>
+            <p class="text-gray-300">Taze deniz ürünleriyle dolu bir şölen.</p>
+            <p class="text-amber-500 font-bold mb-2">₺200</p>
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center">
+        <img src="img/julie-martins-9_JzprubLOs-unsplash.jpg" class="w-full md:w-1/3 h-64 object-cover rounded-lg hover-zoom mt-3" alt="Deniz Mahsulleri">
+        <div class="md:ml-8 mt-4 md:mt-0 text-center md:text-left">
+            <h3 class="text-2xl font-semibold mb-2">Tiramisu</h3>
+            <p class="text-gray-300">Klasik İtalyan tatlısı, Ladina dokunuşuyla.</p>
+            <p class="text-amber-500 font-bold mt-2">₺70</p>
+        </div>
+    </div>
+  </div>
+ </section>
+ <!--  Menü End -->
+
+<!--  Hakkımızda Start -->
+  <section id="hakkimizda" class="py-20 bg-emerald-900 parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200');">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Biz Kimiz?</h2>
+            <p class="text-lg text-gray-200 max-w-2xl mx-auto">Ladina Restoran, lezzeti sanata dönüştürmek için 2020’de kuruldu. Her yemeğimizde tutku ve özen var. Misafirlerimize sadece yemek değil, bir deneyim sunuyoruz.</p>
+        </div>
+    </section>
+<!--  Hakkımızda End -->
+  <!-- İletişim Start -->
+  <section id="iletisim" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Bize Ulaşın</h2>
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <p class="text-gray-300"><strong>Adres:</strong> Ladina Cad. No: 5, İstanbul</p>
+                <p class="text-gray-300"><strong>Telefon:</strong> +90 555 987 65 43</p>
+                <p class="text-gray-300"><strong>E-posta:</strong> info@ladinarestoran.com</p>
+            </div>
+            <form class="w-full md:w-1/2 space-y-4">
+                <input type="text" placeholder="Adınız" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <input type="email" placeholder="E-posta" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <textarea placeholder="Mesajınız" rows="4" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                <button type="submit" class="bg-amber-500 text-white px-8 py-3 rounded-lg hover-scale-btn hover:bg-amber-600">Mesaj Gönder</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!--  İletişim End-->
+<!-- Fotter Start -->
+  <footer class="bg-emerald-800 py-6 text-center">
+    <p>© 2025 Ladina Restoran. Tüm hakları saklıdır.</p>
+  </footer>
+ <!-- Fotter End -->
+</body>
+</html>
